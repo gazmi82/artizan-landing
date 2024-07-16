@@ -1,0 +1,62 @@
+$font-family: "Sofia Pro", sans-serif;
+$font-family-sofia-pro: "Sofia Pro", sans-serif;
+$font-family-poppins: "Poppins", sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-size-regular: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-45: 45px;
+$font-color-00BA56: #00ba56;
+$font-color-6223BE: #6223be;
+$font-color-black: #000000;
+$character-spacing: 0;
+$line-spacing: 16px;
+$line-spacing-22: 22px;
+$line-spacing-60: 60px;
+
+.font-regular {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-regular;
+  color: $font-color-black;
+  letter-spacing: $character-spacing;
+  line-height: $line-spacing;
+}
+
+.font-medium-15 {
+  font-family: $font-family-poppins;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-15;
+  color: $font-color-black;
+  letter-spacing: $character-spacing;
+  line-height: $line-spacing-22;
+}
+
+.font-regular-16 {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-16;
+  color: $font-color-00BA56;
+  letter-spacing: $character-spacing;
+  line-height: $line-spacing;
+}
+
+.semi-bold-45 {
+  font-family: $font-family-sofia-pro;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-45;
+  color: $font-color-black;
+  letter-spacing: $character-spacing;
+  line-height: $line-spacing-60;
+}
+
+.semi-bold-45-purple {
+  font-family: $font-family-sofia-pro;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-45;
+  color: $font-color-6223BE;
+  letter-spacing: $character-spacing;
+  line-height: $line-spacing-60;
+}
