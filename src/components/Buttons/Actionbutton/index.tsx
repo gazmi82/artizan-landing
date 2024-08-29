@@ -1,9 +1,21 @@
 import React from "react";
 import "./ActionButton.scss";
 
-const ActionButton = (className: any) => {
+interface ActionButtonProps {
+  label: string;
+  className?: string; // className is optional, default to empty string
+  onClick?: () => void;
+}
+
+const ActionButton = ({
+  label,
+  className = "",
+  onClick,
+}: ActionButtonProps) => {
   return (
-    <div className={`btn p-2 w-32  rounded-full ${className}`}>Subscribe</div>
+    <div className={`btn p-2 w-32 rounded-full ${className}`} onClick={onClick}>
+      {label}
+    </div>
   );
 };
 
