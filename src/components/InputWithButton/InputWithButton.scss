@@ -1,0 +1,35 @@
+@import "../../style/index.scss";
+
+.input-with-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .input-field {
+    flex-grow: 1;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: none;
+    color: black;
+  }
+
+  .input-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    background-color: #5c2db3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: #4a2294;
+    }
+  }
+}

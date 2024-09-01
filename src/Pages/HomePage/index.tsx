@@ -1,9 +1,13 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 import "./Home.scss";
 import { png } from "../../assets/SectionOne";
 import NavBar from "../../components/NavBar";
+import Footer from "../../components/Footer";
 
 const HomePage = () => {
+  const { status, error } = useSelector((state: RootState) => state.subscribe);
   return (
     <>
       <div className="home pt-6 flex justify-between m-auto">
@@ -19,6 +23,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Footer status={status} error={error} />
     </>
   );
 };
