@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import "./NavBar.scss";
 import LinkButton from "../Buttons/LinkButton";
@@ -26,15 +25,13 @@ const NavBar = (className: any) => {
   }, []);
 
   return (
-    <div
-      className={`nav flex justify-between items-center p-2  ${className} ${
-        isSticky ? "sticky" : ""
-      }`}
-    >
-      <div className="logo text-xl font-bold ml-4">Artizan</div>
-      <div className="rightContent flex items-center w-auto mr-4">
-        <LinkButton className={"mr-6"} />{" "}
-        <ActionButton label={"Get a quote"} onClick={handleGetQuote} />
+    <div className={`nav ${className} ${isSticky ? "sticky" : ""}`}>
+      <div className="content flex justify-between items-center p-2.5">
+        <div className="text-xl font-bold">Artizan</div>
+        <div className="flex items-center w-auto">
+          <LinkButton className={"mr-6"} />
+          <ActionButton label={"Get a quote"} onClick={handleGetQuote} />
+        </div>
       </div>
     </div>
   );

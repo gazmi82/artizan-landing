@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.scss";
 import HomePage from "./Pages/HomePage";
-import LoadingSpinner from "./components/Loading";
+import LoadingSpinner from "./component/Loading";
 import { Suspense } from "react";
 
 const App = () => {

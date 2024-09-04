@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import "./Home.scss";
 import { png } from "../../assets/SectionOne";
-import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
+import NavBar from "../../component/NavBar";
+import Footer from "../../component/Footer";
 
 const HomePage = () => {
   const { status, error } = useSelector((state: RootState) => state.subscribe);
