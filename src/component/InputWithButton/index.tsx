@@ -1,6 +1,6 @@
 import React from "react";
 import "./InputWithButton.scss";
-import ActionButton from "../Buttons/Actionbutton";
+import { Button } from "../../components/ui/button";
 
 interface InputWithButtonProps {
   type: string;
@@ -31,11 +31,9 @@ const InputWithButton = ({
         className="input-field"
       />
       {buttonLabel && onButtonClick && (
-        <ActionButton
-          label={buttonLabel}
-          className="input-button"
-          onClick={onButtonClick}
-        />
+        <Button className="input-button" onClick={onButtonClick}>
+          {buttonLabel}
+        </Button>
       )}
     </div>
   );

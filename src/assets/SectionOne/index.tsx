@@ -6,5 +6,16 @@ import { default as Card4 } from "./Card4.png";
 import { default as Card5 } from "./Card5.png";
 import { default as Card6 } from "./Card6.png";
 import { default as HomeImage } from "./home.png";
+import { default as Backgr } from "./bg.png";
 
-export const png = { Man, Card1, Card2, Card3, Card4, Card5, Card6, HomeImage };
+export const png = {
+  Man,
+  Card1,
+  Card2,
+  Card3,
+  Card4,
+  Card5,
+  Card6,
+  HomeImage,
+  Backgr,
+};

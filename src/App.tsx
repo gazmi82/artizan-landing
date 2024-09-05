@@ -12,7 +12,7 @@ const App = () => {
     // Simulate a data fetch or some async operation
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2 seconds
+    }, 1000); // 1 seconds
 
     return () => clearTimeout(timer);
   }, []);

@@ -1,27 +1,19 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./src", // baseUrl set to "src" directory
     "paths": {
-      "@components/*": ["./components/*"],
-      "@lib/*": ["./lib/*"]
+      "@components/*": ["components/*"], // Alias for components
+      "@lib/*": ["lib/*"] // Alias for lib folder
     },
-
-    "target": "es5",
+    "module": "esnext", // Needed for dynamic imports
+    "jsx": "react-jsx",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": false
   },
-  "include": ["src", "components", "lib"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

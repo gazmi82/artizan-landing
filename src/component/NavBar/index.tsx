@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./NavBar.scss";
-import LinkButton from "../Buttons/LinkButton";
-import ActionButton from "../Buttons/Actionbutton";
+import { Button } from "../../components/ui/button"; // Assuming shadcn Button is located here
 
 const NavBar = (className: any) => {
   const [isSticky, setIsSticky] = useState(false);
@@ -29,8 +28,18 @@ const NavBar = (className: any) => {
       <div className="content flex justify-between items-center p-2.5">
         <div className="text-xl font-bold">Artizan</div>
         <div className="flex items-center w-auto">
-          <LinkButton className={"mr-6"} />
-          <ActionButton label={"Get a quote"} onClick={handleGetQuote} />
+          {/* <LinkButton className={"mr-6"} /> */}
+          <Button variant="link" className="mr-6 text-base">
+            LoreIpsum
+          </Button>
+
+          {/* Replacing ActionButton with shadcn/ui Button */}
+          <Button
+            onClick={handleGetQuote}
+            className="bg-violet-500 hover:bg-violet-700 text-white rounded-full"
+          >
+            Get a quote
+          </Button>
         </div>
       </div>
     </div>

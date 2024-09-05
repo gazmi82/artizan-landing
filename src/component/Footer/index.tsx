@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Footer.scss";
 import InputWithButton from "../InputWithButton";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../redux/store";
 import { subscribeUser } from "../../redux/slices/subscribeSlice";
+import { Toaster } from "../../components/ui/sonner";
+import { toast } from "sonner";
 
 interface FooterProps {
   status: string;
@@ -14,14 +16,39 @@ const Footer = ({ status, error }: FooterProps) => {
   const [email, setEmail] = useState<string>("");
   const dispatch: AppDispatch = useDispatch();
 
-  const handleSubscribe = () => {
-    if (email) {
-      dispatch(subscribeUser({ email }));
-    }
+  // Email validation function
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
+
+  const handleSubscribe = () => {
+    if (!email) {
+      toast.error("Email is required");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    dispatch(subscribeUser({ email }));
+  };
+
+  // useEffect to display success/error toasts
+  useEffect(() => {
+    if (status === "succeeded") {
+      toast.success("Successfully subscribed! 🎉");
+    } else if (status === "failed" && error) {
+      toast.warning("Already subscribed! ⚠️");
+    }
+  }, [status, error]);
 
   return (
     <footer className="footer">
+      {/* Toaster to display toast notifications */}
+      <Toaster position="bottom-right" richColors />
       <div className="footer-content">
         <div className="subscribe-section">
           <h2>Lorem Ipsum is simply dummy text</h2>
@@ -35,10 +62,6 @@ const Footer = ({ status, error }: FooterProps) => {
             onButtonClick={handleSubscribe}
             className="subscribe-form"
           />
-          {status === "failed" && <p className="error-message">{error}</p>}
-          {status === "succeeded" && (
-            <p className="success-message">Successfully subscribed!</p>
-          )}
         </div>
         <div className="footer-bottom">
           <div className="social-icons">
