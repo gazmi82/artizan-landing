@@ -8,7 +8,7 @@ interface InputWithButtonProps {
   value: string | number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
-  buttonLabel?: string;
+  buttonLabel?: string | React.ReactNode;
   onButtonClick?: () => void;
 }
 

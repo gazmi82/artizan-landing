@@ -9,6 +9,7 @@
     top: 0;
     z-index: 1;
   }
+  /* Home.scss */
 
   .header-text {
     padding-top: 30px;
@@ -34,7 +35,6 @@
   .home-content-container {
     display: flex;
     justify-content: center;
-
     height: auto;
     img {
       margin: auto;
@@ -42,4 +42,24 @@
       padding-top: 50px;
     }
   }
+}
+
+.header-text {
+  padding-top: 30px;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  max-width: 490px;
+  letter-spacing: 0;
+  transform: scale(1, 0.9);
+  line-height: 1.25;
+  font-family: $font-family-sofia-pro;
+}
+span {
+  font-family: $font-family-sofia-pro;
+  letter-spacing: 0;
+  transform: scale(1, 0.9);
+  font-size: 28px;
+  font-weight: 500;
+  color: $purple;
 }

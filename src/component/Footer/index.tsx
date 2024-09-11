@@ -6,6 +6,7 @@ import { AppDispatch } from "../../redux/store";
 import { subscribeUser } from "../../redux/slices/subscribeSlice";
 import { Toaster } from "../../components/ui/sonner";
 import { toast } from "sonner";
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface FooterProps {
   status: string;
@@ -14,6 +15,7 @@ interface FooterProps {
 
 const Footer = ({ status, error }: FooterProps) => {
   const [email, setEmail] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false); // Loading state
   const dispatch: AppDispatch = useDispatch();
 
   // Email validation function
@@ -33,22 +35,28 @@ const Footer = ({ status, error }: FooterProps) => {
       return;
     }
 
+    setLoading(true);
+
+    setEmail(""); // Clear the input after subscribing
+
     dispatch(subscribeUser({ email }));
   };
 
   // useEffect to display success/error toasts
   useEffect(() => {
     if (status === "succeeded") {
+      setLoading(false); // Stop loading after success
       toast.success("Successfully subscribed! 🎉");
     } else if (status === "failed" && error) {
-      toast.warning("Already subscribed! ⚠️");
+      setLoading(false); // Stop loading after failure
+      toast.warning("Already subscribed!");
     }
   }, [status, error]);
 
   return (
     <footer className="footer">
       {/* Toaster to display toast notifications */}
-      <Toaster position="bottom-right" richColors />
+      <Toaster position="bottom-right" />
       <div className="footer-content">
         <div className="subscribe-section">
           <h2>Lorem Ipsum is simply dummy text</h2>
@@ -58,7 +66,7 @@ const Footer = ({ status, error }: FooterProps) => {
             placeholder="Email"
             value={email}
             onChange={(e: any) => setEmail(e.target.value)}
-            buttonLabel="Subscribe"
+            buttonLabel={loading ? <ClipLoader size={15} /> : "Subscribe"}
             onButtonClick={handleSubscribe}
             className="subscribe-form"
           />

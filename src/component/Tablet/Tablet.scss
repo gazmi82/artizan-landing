@@ -1,0 +1,14 @@
+.right-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-image-content {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.right-image-content.fade-in {
+  opacity: 0.3;
+}

@@ -25,10 +25,9 @@ const NavBar = (className: any) => {
 
   return (
     <div className={`nav ${className} ${isSticky ? "sticky" : ""}`}>
-      <div className="content flex justify-between items-center p-2.5">
+      <div className="max-w-screen-2xl m-auto flex justify-between items-center py-2.5">
         <div className="text-xl font-bold">Artizan</div>
         <div className="flex items-center w-auto">
-          {/* <LinkButton className={"mr-6"} /> */}
           <Button variant="link" className="mr-6 text-base">
             LoreIpsum
           </Button>
