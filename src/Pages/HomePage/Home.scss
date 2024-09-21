@@ -4,12 +4,12 @@
   display: block;
   margin: auto;
   height: 100vh;
+
   .navPosition {
     position: sticky;
     top: 0;
     z-index: 1;
   }
-  /* Home.scss */
 
   .header-text {
     padding-top: 30px;
@@ -22,20 +22,17 @@
     transform: scale(1, 0.9);
     line-height: 1.25;
     font-family: $font-family-sofia-pro;
-  }
-  span {
-    font-family: $font-family-sofia-pro;
-    letter-spacing: 0;
-    transform: scale(1, 0.9);
-    font-size: 35px;
-    font-weight: 500;
-    color: $purple;
+
+    span {
+      color: $purple;
+    }
   }
 
   .home-content-container {
     display: flex;
     justify-content: center;
     height: auto;
+
     img {
       margin: auto;
       width: 75%;
@@ -44,22 +41,65 @@
   }
 }
 
-.header-text {
-  padding-top: 30px;
-  font-size: 28px;
-  font-weight: 500;
-  text-align: left;
-  max-width: 490px;
-  letter-spacing: 0;
-  transform: scale(1, 0.9);
-  line-height: 1.25;
-  font-family: $font-family-sofia-pro;
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  align-items: flex-start;
+
+  .left-block {
+    max-width: 30%;
+    margin-right: 40px;
+
+    .header-text {
+      padding-top: 30px;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: left;
+      letter-spacing: 0;
+      line-height: 1.25;
+    }
+
+    span {
+      color: $purple;
+    }
+
+    /* Card styles */
+    .simple-card-icon {
+      padding: 12px;
+      margin-bottom: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      &.selected-card {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .right-block {
+    max-width: 60%;
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
-span {
-  font-family: $font-family-sofia-pro;
-  letter-spacing: 0;
-  transform: scale(1, 0.9);
-  font-size: 28px;
-  font-weight: 500;
-  color: $purple;
+
+.extra-space-section {
+  height: 500px; /* Adjust height as needed */
 }
