@@ -40,25 +40,16 @@
     }
   }
 }
-
+.header-text {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
 .second-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px 0;
-  align-items: flex-start;
-
+  height: 80vh;
   .left-block {
-    max-width: 30%;
     margin-right: 40px;
-
-    .header-text {
-      padding-top: 30px;
-      font-size: 28px;
-      font-weight: 500;
-      text-align: left;
-      letter-spacing: 0;
-      line-height: 1.25;
-    }
 
     span {
       color: $purple;
@@ -102,4 +93,9 @@
 
 .extra-space-section {
   height: 500px; /* Adjust height as needed */
+}
+
+.card {
+  background: red;
+  overflow: hidden;
 }

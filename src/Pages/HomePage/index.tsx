@@ -77,7 +77,7 @@ const HomePage = () => {
         <div className="navPosition">
           <NavBar />
         </div>
-        <div className="header-text">
+        <div className="header-text pt-16">
           Lorem Ipsum <span>dummy text</span> of the printing industry.
         </div>
         <div className="home-content-container">
@@ -89,12 +89,11 @@ const HomePage = () => {
 
       {/* Second section with SimpleCardIcons and dynamic image */}
       <section
-        className="flex justify-between mx-auto items-center max-w-screen-2xl mb-28 second-section"
+        className="flex justify-between mx-auto items-center max-w-screen-2xl py-28"
         ref={secondSectionRef}
       >
-        {/* Left side with SimpleCardIcons */}
-        <div className="left-block max-w-lg mr-10">
-          <div className="header-text font-bold text-4xl">
+        <div className="left-block max-w-lg mr-10 ">
+          <div className="header-text text-left font-bold text-4xl">
             Lorem Ipsum <span className="text-purple-600">dummy text</span> of
             the printing industry.
           </div>
@@ -139,6 +138,8 @@ const HomePage = () => {
           </div>
         </div>
 
+        {/* Left side with SimpleCardIcons */}
+
         {/* Right side with dynamic image */}
         <div className="right-block" ref={imageRef}>
           <Tablet imageSrc={currentImage} altText="Dynamic Right Side Image" />
@@ -148,6 +149,70 @@ const HomePage = () => {
       {/* Adding Extra Space to Prevent Overlap with Footer */}
       <section className="extra-space-section">
         {/* Blank space or extra content here */}
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="header-text text-center pt-16">
+          Lorem Ipsum dummy text of the printing industry.
+        </div>
+        <div className="flex justify-between mx-auto items-start max-w-screen-2xl py-16 gap-6">
+          {/* Card 1 */}
+          <div className="max-w-xs w-full overflow-hidden">
+            <img
+              src={png.Category1}
+              className="w-full h-auto object-cover"
+              alt="Category 1"
+            />
+            <div className="py-4">
+              <h2 className="text-left text-base font-semibold mb-2">
+                Lorem Ipsum is simply dummy text of the printing industry.
+              </h2>
+              <p className="text-left text-gray-600 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="max-w-xs w-full overflow-hidden">
+            <img
+              src={png.Category2}
+              className="w-full h-auto object-cover"
+              alt="Category 2"
+            />
+            <div className="py-4">
+              <h2 className="text-left text-base font-semibold mb-2">
+                Lorem Ipsum is simply dummy text of the printing industry.
+              </h2>
+              <p className="text-left text-gray-600 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="max-w-xs w-full overflow-hidden">
+            <img
+              src={png.Category3}
+              className="w-full h-auto object-cover"
+              alt="Category 3"
+            />
+            <div className="py-4">
+              <h2 className="text-left text-base font-semibold mb-2">
+                Lorem Ipsum is simply dummy text of the printing industry.
+              </h2>
+              <p className="text-left text-gray-600 text-sm">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}

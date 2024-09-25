@@ -11,6 +11,9 @@ import { default as Tools } from "./design.svg";
 import { default as Auth } from "./auth.png";
 import { default as CreatorHome } from "./creatorHome.png";
 import { default as LiveSession } from "./liveSession.png";
+import { default as Category1 } from "./Category1.png";
+import { default as Category2 } from "./Category2.png";
+import { default as Category3 } from "./Category3.png";
 
 export const png = {
   Man,
@@ -26,4 +29,7 @@ export const png = {
   Auth,
   CreatorHome,
   LiveSession,
+  Category1,
+  Category2,
+  Category3,
 };
